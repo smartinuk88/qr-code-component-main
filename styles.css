@@ -4,8 +4,19 @@
   --slate-900: hsl(218, 44%, 22%);
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  text-align: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -13,9 +24,35 @@ body {
 }
 
 .card {
-  height: 50%;
-  width: 50%;
-  background-color: aqua;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  height: 499px;
+  width: 320px;
+  background-color: white;
+  padding: 16px 16px 0 16px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgb(0 0 0 0.2);
+}
+
+.card-textbox {
+  padding: 0 16px;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--slate-900);
+  margin-bottom: 16px;
+}
+
+.card-paragraph {
+  font-weight: 400;
+  color: var(--slate-500);
+}
+
+.qr-code {
+  width: 100%;
+  border-radius: 10px;
 }
 
 .attribution {
